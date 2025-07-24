@@ -1,114 +1,136 @@
-# uber-fare-analysis-kigali-2025
-A Power BI and Python-based analysis of Uber fares in Kigali using data visualization and distance computation.
+# 🚖 Uber Fare Dataset Analysis using Python & Power BI
 
-# 🚕 Uber Fare Analysis – Kigali 2025
+## 🎯 Objective
 
-## 📊 Project Overview
-
-This project focuses on analyzing Uber fare data using **Python (Jupyter Notebook)** and **Power BI** to uncover insights and visualize trends in ride pricing, pickup locations, payment types, and more.
-
-The project follows a typical **data analyst workflow**: cleaning raw data, transforming it for analysis, building a data model, and designing interactive dashboards.
-
----
-
-## 🔧 Tools Used
-
-- 🐍 **Python (Jupyter Notebook)** – Data cleaning and transformation
-- 📈 **Power BI** – Data modeling and interactive visualization
-- 📁 **CSV** – Data source format
-- 🌐 **GitHub** – Project documentation and version control
-
----
-
-## 🧹 Step 1: Data Cleaning in Python
-
-The dataset was cleaned using Python libraries including:
-- `pandas` for handling missing values and formatting datetime
-- `datetime` for converting and manipulating time columns
-- Removal of null or incorrect latitude/longitude
-- Extracted features like:
-  - `pickup_date`
-  - `pickup_hour`
-  - `day_name`
-  - `month_name`
-
-The cleaned dataset was saved as `cleaned_uber_fares.csv`.
-
----
-
-## 🔗 Step 2: Power BI Data Modeling
-
-**Model Relationships:**
-- Connected `uber_fare[pickup_date]` with `Date[date]`
-- Set cardinality to `One to Many`
-- Used the `Date` table to filter Uber data for time-based insights
-
-**Relationships created:**
+The aim of this project was to analyze the **Uber Fares Dataset** to derive insights related to:
+- Fare distribution patterns  
+- Ride distances  
+- Temporal ride behavior (hourly, daily, monthly trends)  
+- Identifying busiest periods  
+- Creating an interactive Power BI dashboard  
+- Recommending data-driven insights to improve Uber operations
 
 
----
+## 🧰 Tools Used
 
-## 📊 Step 3: Dashboard Visualizations
+- 🐍 Python (Jupyter Notebook) – Data cleaning, EDA, and feature engineering  
+- 📊 Power BI – Data modeling, visualization, and dashboarding  
+- 📁 CSV – Intermediate cleaned data file format  
+- 🌐 GitHub – Documentation, version control, and project submission
 
-The Power BI dashboard includes:
 
-| Visual | Description |
-|--------|-------------|
-| 📍 **Map** | Displays pickup distribution based on latitude/longitude |
-| 📅 **Line Chart** | Shows average fare over time |
-| 💳 **Column Chart** | Visualizes distribution of payment types |
-| ⏰ **Bar Chart** | Trips by hour of the day |
-| 🗓 **Month Slicer** | Filters by specific month |
-| 🔄 **Interactive Filters** | Used to filter by date, location, and more |
+## 📥 Dataset
 
-**Bonus Filters Implemented:**
-- Fare Amount (Greater than X)
-- Payment Type Filter
-- Time of Day Filter (Morning, Afternoon, Evening, Night)
+- **Source**: [Uber Fares Dataset - Kaggle](https://www.kaggle.com/datasets/yasserh/uber-fares-dataset)
+- **File Used**: `uber.csv`  
+- The dataset contains:
+  - `fare_amount`, `pickup_datetime`, `pickup_latitude`, `pickup_longitude`, `dropoff_latitude`, `dropoff_longitude`, `passenger_count`
 
----
 
-## 🎯 Key Insights
+## 🧼 1. Data Understanding & Preparation
 
-- 🕗 Most rides happen between **4 PM and 7 PM**
-- 💰 Cash payments are the most common
-- 🗺 Central Kigali shows the highest pickup activity
-- 📉 Some days have significant drops in ride activity — possibly weekends or holidays
+### ✅ Steps Taken:
+- Loaded dataset into Pandas using Python  
+- Assessed structure (200,000 records × 9 columns)  
+- Checked and handled missing values (2 missing drop-off coordinates)  
+- Cleaned data types and removed/filtered invalid entries  
+- Exported cleaned dataset as `cleaned_uber_fares.csv` for Power BI
 
----
 
-## 📁 Files in this Repository
+## 📊 2. Exploratory Data Analysis (EDA)
 
-| File | Description |
-|------|-------------|
-| `Uber_Data_Cleaning.ipynb` | Jupyter notebook for data cleaning |
-| `cleaned_uber_fares.csv` | Cleaned data used for Power BI |
-| `UberFareAnalysis.pbix` | Power BI dashboard file |
-| `README.md` | This project documentation |
+### 📌 Summary Statistics:
+- Computed mean, median, mode, standard deviation, range, and quartiles  
+- Identified outliers using visualizations (box plots and scatter plots)
 
----
+### 📈 Visuals Created:
+- Fare Amount vs. Distance (Scatter plot)  
+- Fare Distribution (Histogram)  
+- Correlation heatmap of numerical features
 
-## 🧠 Project Learnings
 
-This project helped me practice:
+## 🛠️ 3. Feature Engineering
 
-- Real-world data cleaning in Python
-- Power BI relationships and model building
-- Interactive report and dashboard design
-- Storytelling with data insights
+- Extracted new time-based features:
+  - `pickup_hour`, `pickup_day`, `pickup_month`, `pickup_date`  
+- Created distance using Haversine formula
+  
+- Saved enhanced dataset to `enhanced_uber_fares.csv` for Power BI
 
----
 
-## 📍 Next Steps (Optional)
+## 📉 4. Power BI Analysis
 
-- Add forecast or trend lines for future fare prediction
-- Use DAX to calculate KPIs like average fare per day or trip duration
+### 🚦 Visualizations Built:
+- Monthly and hourly fare patterns  
+- Distance vs. fare comparisons  
+- Peak/off-peak trend lines  
+- Fare summary by passenger count  
+- Time-series trend line of fare over months  
+- Filled Map: Geographic distribution using pickup/dropoff points  
 
----
+### 🔍 Filters and Drill-downs:
+- Enabled slicers for hour, day, month, and passenger count  
+- Latitude/Longitude mapped with "Do Not Summarize" setting
 
-## 📬 Contact
 
-👤 **KAYIRANGA Deus**  
-📧 Email:deuskayiranga12@gmail.com  
-📍 Adventist University of Central Africa  
-📘 Student Project – 2025  
+## 📊 5. Power BI Dashboard
+
+- ✔️ Clean UI with consistent formatting  
+- ✔️ Histograms and boxplots for fare distribution  
+- ✔️ Map visuals displaying ride locations  
+- ✔️ Responsive filters for interactivity  
+- ✔️ Professional layout for insights and storytelling
+
+📸 Screenshots:
+- Data Load
+  
+  <img width="1871" height="889" alt="Screenshot 2025-07-24 185654" src="https://github.com/user-attachments/assets/9c14e0a7-60dd-4528-bc01-2af5c34a42e2" />
+
+- Dashboard Visuals (fare trends, maps, etc.)
+
+<img width="1216" height="658" alt="Screenshot 2025-07-24 141608" src="https://github.com/user-attachments/assets/333084a0-62c1-477c-87f4-2dcadbf3ef99" />
+
+## 📑 6. Analytical Report
+
+### 🧾 Introduction
+This project aims to uncover hidden patterns in Uber’s NYC fare data and build a data-driven dashboard for strategic decision-making.
+
+### 📍 Methodology
+- Used Python for data cleaning and preparation  
+- Used Power BI for dashboard development  
+- Enhanced dataset with new features and columns  
+- Cleaned outliers and ensured data validity  
+
+### 📊 Analysis & Results
+- Most rides happen between 4 PM–8 PM (peak hours)  
+- Fare tends to increase with distance, but has some exceptions (outliers)  
+- Few multi-passenger rides; most trips involve 1 passenger  
+- Map reveals high-density pickup areas in central NYC
+
+### 🧠 Recommendations
+- Improve service availability during evening hours  
+- Introduce promotions for long-distance low-fare trips  
+- Consider optimizing routes in fare-dense regions
+
+
+## 📂 Deliverables
+
+- ✅ Power BI Dashboard File: `uber_fare_analysis.pbix`  
+- ✅ Cleaned Dataset: `cleaned_uber_fares.csv`  
+- ✅ Screenshots Folder: `/screenshots`  
+- ✅ Python Notebook: `Uber_Fare_EDA.ipynb`  
+- ✅ README File (this document)
+
+
+
+## ✅ Final Notes
+
+- The project fulfills all six assignment requirements  
+- Interactivity, EDA, and business insight goals achieved  
+- Dashboard and report aligned with professional standards
+
+
+
+> ✨ Thank you for reviewing my Uber Fare Analysis Project! ✨  
+> Wishing you a data-driven future ahead!
+
