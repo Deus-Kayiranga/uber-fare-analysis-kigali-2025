@@ -84,7 +84,7 @@ The aim of this project was to analyze the **Uber Fares Dataset** to derive insi
 📸 Screenshots:
 - Data Load
   
-  <img width="1871" height="889" alt="Screenshot 2025-07-24 185654" src="https://github.com/user-attachments/assets/9c14e0a7-60dd-4528-bc01-2af5c34a42e2" />
+<img width="1871" height="889" alt="Screenshot 2025-07-24 185654" src="https://github.com/user-attachments/assets/9c14e0a7-60dd-4528-bc01-2af5c34a42e2" />
 
 - Dashboard Visuals (fare trends, maps, etc.)
 
