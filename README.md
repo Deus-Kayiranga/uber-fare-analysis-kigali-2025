@@ -118,8 +118,7 @@ This project aims to uncover hidden patterns in Uber’s NYC fare data and build
 ## 📂 Deliverables
 
 - ✅ Power BI Dashboard File: `uber_fare_analysis.pbix`  
-- ✅ Cleaned Dataset: `cleaned_uber_fares.csv`  
-- ✅ Screenshots Folder: `/screenshots`  
+- ✅ Cleaned Dataset: `cleaned_uber_fares.csv`   
 - ✅ Python Notebook: `Uber_Fare_EDA.ipynb`  
 - ✅ README File (this document)
 
@@ -127,8 +126,7 @@ This project aims to uncover hidden patterns in Uber’s NYC fare data and build
 
 ## ✅ Final Notes
 
-- The project fulfills all six assignment requirements  
-- Interactivity, EDA, and business insight goals achieved  
+- The project fulfills all six assignment requirements    
 - Dashboard and report aligned with professional standards
 
 
