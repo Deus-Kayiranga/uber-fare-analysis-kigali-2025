@@ -1,5 +1,7 @@
 # 🚖 Uber Fare Dataset Analysis using Python & Power BI
 
+This project analyzes the Uber Fares Dataset to uncover key insights about fare patterns, trip volume, and time-based trends using Python and Power BI.
+
 ## 🎯 Objective
 
 The aim of this project was to analyze the **Uber Fares Dataset** to derive insights related to:
